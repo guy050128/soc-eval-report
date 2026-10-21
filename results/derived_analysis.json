@@ -1,0 +1,160 @@
+{
+ "note": "以下由作者侧独立复算得出，非流水线自带汇总",
+ "round3_test_majority_class_floor": {
+  "constant_non_attack": 0.6722408026755853,
+  "constant_attack": 0.3277591973244147,
+  "attack": 98,
+  "non_attack": 201
+ },
+ "round3_wilson95": {
+  "baseline": [
+   0.7503,
+   0.8408
+  ],
+  "retrieval": [
+   0.761,
+   0.8499
+  ],
+  "retrieval_on_committed": [
+   0.8891,
+   0.9529
+  ]
+ },
+ "round3_paired_exact_mcnemar_p_two_sided": 0.7552,
+ "round3_errors_per_auto_decision": {
+  "baseline": 0.20066889632107024,
+  "retrieval": 0.07279693486590039
+ },
+ "round3_latency_ratio_retrieval_over_baseline": 4.617801514901432,
+ "round3_fpr_relative_reduction": -0.6346153846153846,
+ "abstention_label_mix": {
+  "round2_q36_improved": {
+   "unknown": 172,
+   "non_attack": 169,
+   "share": 0.9825581395348837,
+   "wilson95": [
+    0.95,
+    0.9941
+   ],
+   "set_prior_non_attack": 0.5
+  },
+  "round2_q38_improved": {
+   "unknown": 190,
+   "non_attack": 188,
+   "share": 0.9894736842105263,
+   "wilson95": [
+    0.9624,
+    0.9971
+   ],
+   "set_prior_non_attack": 0.5
+  },
+  "round3_retrieval": {
+   "unknown": 38,
+   "non_attack": 34,
+   "share": 0.8947368421052632,
+   "wilson95": [
+    0.7587,
+    0.9583
+   ],
+   "set_prior_non_attack": 0.6722408026755853
+  }
+ },
+ "round3_retrieval_abstention_counterfactual_accuracy_if_forced_non_attack": 0.9230769230769231,
+ "same_arm_cross_split_variance": {
+  "arm": "q38--baseline",
+  "validation_accuracy": 0.642,
+  "test_accuracy": 0.7993311036789298,
+  "gap_pp": 15.7,
+  "validation_fpr": 0.525,
+  "test_fpr": 0.25870646766169153
+ },
+ "recomputed_development_200": {
+  "q38--baseline": {
+   "accuracy": 0.815,
+   "coverage": 1.0,
+   "non_attack_fpr": 0.34
+  },
+  "q38--retrieval": {
+   "accuracy": 0.84,
+   "coverage": 0.88,
+   "accuracy_on_committed": 0.955,
+   "non_attack_fpr": 0.08
+  }
+ },
+ "recomputed_validation_120": {
+  "q36--baseline": {
+   "accuracy": 0.517,
+   "coverage": 1.0,
+   "non_attack_fpr": 0.675
+  },
+  "q38--baseline": {
+   "accuracy": 0.642,
+   "coverage": 1.0,
+   "non_attack_fpr": 0.525,
+   "attack_recall": 0.975
+  },
+  "q38--retrieval": {
+   "accuracy": 0.842,
+   "coverage": 0.933,
+   "accuracy_on_committed": 0.902,
+   "non_attack_fpr": 0.138,
+   "attack_recall": 1.0
+  },
+  "q38--semantic": {
+   "accuracy": 0.533,
+   "coverage": 0.692,
+   "accuracy_on_committed": 0.771
+  }
+ },
+ "laya_independent_recount": {
+  "records_checked": 231,
+  "all_verdicts_attack": true,
+  "p_attack": {
+   "min": 0.589,
+   "p05": 0.719,
+   "median": 0.892,
+   "p95": 0.949,
+   "max": 0.969,
+   "below_half": 0
+  },
+  "auc_development_200": 0.588,
+  "auc_validation_partial_36": 0.7,
+  "best_single_threshold_accuracy": {
+   "value": 0.57,
+   "threshold": 0.91
+  },
+  "choice_argmax_mismatches": 0,
+  "certainty": {
+   "high": 212,
+   "of": 231,
+   "mean_margin": 0.078,
+   "example_probabilities": {
+    "high": 0.379,
+    "medium": 0.32,
+    "low": 0.301
+   }
+  },
+  "overlap": {
+   "max_p_attack_on_non_attack": 0.956,
+   "min_p_attack_on_attack": 0.719
+  }
+ },
+ "latency_confound": {
+  "baseline_num_predict": 256,
+  "candidate_num_predict": 768,
+  "median_output_tokens": {
+   "baseline": [
+    53,
+    54
+   ],
+   "candidate": [
+    274,
+    367
+   ]
+  },
+  "fitted_qwen38": {
+   "s_per_output_token": 0.35,
+   "prefill_token_per_s": 190
+  }
+ }
+}

@@ -1,0 +1,5 @@
+﻿model,split,n,accuracy,attack_recall,non_attack_fpr,tp,fp,tn,fn,brier,ece,p50_s,p95_s
+clef-flash,development,200,0.515,1.0,0.97,100,97,3,0,0.3592,0.3941,0.56,1.274
+clef-flash,validation,120,0.3833,1.0,0.925,40,74,6,0,0.4776,0.5158,0.513,0.953
+laya,development,200,0.5,1.0,1.0,100,100,0,0,0.3774,0.3694,11.784,29.107
+laya,validation,120,0.3333,1.0,1.0,40,80,0,0,0.5153,0.5452,11.546,25.637

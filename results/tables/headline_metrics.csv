@@ -1,0 +1,8 @@
+﻿round,arm,n,accuracy,coverage,attack_recall,non_attack_fpr,unknown,latency_median_s
+round1,q36-original,400,0.58,0.9975,0.855,0.69,1,1.581
+round2,q36_original,1000,0.57,1.0,0.844,0.704,0,11.183
+round2,q36_improved,1000,0.539,0.828,0.988,0.572,172,14.097
+round2,q38_original,1000,0.764,0.999,0.964,0.436,1,43.72
+round2,q38_improved,1000,0.661,0.81,0.996,0.298,190,56.259
+round3_test,q38--baseline,299,0.7993,1.0,0.9184,0.2587,0,28.1
+round3_test,q38--retrieval,299,0.8094,0.8729,0.9592,0.0945,38,129.76

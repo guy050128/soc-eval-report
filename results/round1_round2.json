@@ -1,0 +1,303 @@
+{
+ "round1": {
+  "round": "round1",
+  "stage": "published 2026-10-09",
+  "n": 400,
+  "attack": 200,
+  "non_attack": 200,
+  "model": "qwen3.6:35b-a3b-mtp-q4_K_M",
+  "model_digest": "2f2015ccff10e15cb16889a4771479e48eab740e607924e76fd27ba71f9e11bb",
+  "sampling": {
+   "think": false,
+   "temperature": 0,
+   "num_ctx": 16384,
+   "num_batch": 256,
+   "num_predict": 256,
+   "keep_alive": "5m",
+   "seed": 20261009
+  },
+  "correct": 232,
+  "accuracy": 0.58,
+  "wilson95": [
+   0.5311,
+   0.6274
+  ],
+  "tp": 171,
+  "tn": 61,
+  "fp": 138,
+  "fn": 29,
+  "unknown": 1,
+  "attack_recall": 0.855,
+  "non_attack_fpr": 0.69,
+  "attack_precision": 0.5534,
+  "f1": 0.6719,
+  "coverage": 0.9975,
+  "latency_median_s": 1.581,
+  "error_concentration": {
+   "SQL_injection_cases": 136,
+   "SQL_injection_correct": 36,
+   "SQL_injection_non_attack": 133,
+   "SQL_injection_false_positives": 100,
+   "share_of_all_false_positives": 0.7246376811594203
+  },
+  "by_alert_type": [
+   [
+    "SQL注入",
+    136,
+    36,
+    0.2647
+   ],
+   [
+    "敏感信息/重要文件泄漏",
+    47,
+    31,
+    0.6596
+   ],
+   [
+    "代码执行",
+    44,
+    35,
+    0.7955
+   ],
+   [
+    "目录遍历",
+    43,
+    38,
+    0.8837
+   ],
+   [
+    "默认配置不当",
+    29,
+    27,
+    0.931
+   ],
+   [
+    "命令执行",
+    24,
+    21,
+    0.875
+   ],
+   [
+    "信息泄露",
+    16,
+    8,
+    0.5
+   ],
+   [
+    "弱口令",
+    14,
+    4,
+    0.2857
+   ],
+   [
+    "其他",
+    12,
+    11,
+    0.9167
+   ],
+   [
+    "文件下载",
+    11,
+    4,
+    0.3636
+   ],
+   [
+    "文件读取",
+    7,
+    7,
+    1.0
+   ],
+   [
+    "文件上传",
+    4,
+    4,
+    1.0
+   ],
+   [
+    "配置不当/错误",
+    4,
+    2,
+    0.5
+   ],
+   [
+    "黑市工具",
+    3,
+    0,
+    0.0
+   ],
+   [
+    "系统/服务配置不当",
+    2,
+    1,
+    0.5
+   ],
+   [
+    "跨站脚本攻击（XSS）",
+    2,
+    1,
+    0.5
+   ],
+   [
+    "逻辑/设计错误",
+    1,
+    1,
+    1.0
+   ],
+   [
+    "非授权访问/权限绕过",
+    1,
+    1,
+    1.0
+   ]
+  ]
+ },
+ "round2": {
+  "round": "round2",
+  "stage": "published 2026-10-10",
+  "n": 1000,
+  "attack": 500,
+  "non_attack": 500,
+  "template_groups": 589,
+  "alert_types": 22,
+  "overlap_with_round1_groups": 0,
+  "seed": 20261010,
+  "configs": {
+   "q36_original": {
+    "model": "qwen3.6:35b-a3b-mtp-q4_K_M",
+    "correct": 570,
+    "accuracy": 0.57,
+    "attack_recall": 0.844,
+    "non_attack_fpr": 0.704,
+    "unknown": 0,
+    "errors": 0,
+    "latency_median_s": 11.183,
+    "tp": 422,
+    "tn": 148,
+    "fp": 352,
+    "fn": 78,
+    "unknown_attack": 3,
+    "unknown_non_attack": 0
+   },
+   "q36_improved": {
+    "model": "qwen3.6:35b-a3b-mtp-q4_K_M",
+    "arm": "q36-evidence",
+    "correct": 539,
+    "accuracy": 0.539,
+    "attack_recall": 0.988,
+    "non_attack_fpr": 0.572,
+    "unknown": 172,
+    "errors": 0,
+    "latency_median_s": 14.097,
+    "tp": 494,
+    "tn": 45,
+    "fp": 286,
+    "fn": 3,
+    "unknown_attack": 3,
+    "unknown_non_attack": 169
+   },
+   "q38_original": {
+    "model": "qwen3.8:27b",
+    "correct": 764,
+    "accuracy": 0.764,
+    "attack_recall": 0.964,
+    "non_attack_fpr": 0.436,
+    "unknown": 1,
+    "errors": 0,
+    "latency_median_s": 43.72,
+    "tp": 482,
+    "tn": 282,
+    "fp": 218,
+    "fn": 17,
+    "unknown_attack": 1,
+    "unknown_non_attack": 0
+   },
+   "q38_improved": {
+    "model": "qwen3.8:27b",
+    "arm": "q38-evidence",
+    "correct": 661,
+    "accuracy": 0.661,
+    "attack_recall": 0.996,
+    "non_attack_fpr": 0.298,
+    "unknown": 190,
+    "errors": 0,
+    "latency_median_s": 56.259,
+    "tp": 498,
+    "tn": 163,
+    "fp": 149,
+    "fn": 0,
+    "unknown_attack": 2,
+    "unknown_non_attack": 188
+   }
+  },
+  "paired": {
+   "q36": {
+    "delta_pp": -3.1,
+    "orig_wrong_new_right": 97,
+    "orig_right_new_wrong": 128,
+    "both_right": 442,
+    "both_wrong_or_unfinished": 333,
+    "group_bootstrap_ci95_pp": [
+     -6.64,
+     0.62
+    ],
+    "bootstrap_groups": 589,
+    "bootstrap_reps": 2000,
+    "bootstrap_seed": 20261011,
+    "mcnemar_exact_p": 0.04526
+   },
+   "q38": {
+    "delta_pp": -10.3,
+    "orig_wrong_new_right": 31,
+    "orig_right_new_wrong": 134,
+    "both_right": 630,
+    "both_wrong_or_unfinished": 205,
+    "group_bootstrap_ci95_pp": [
+     -13.47,
+     -7.27
+    ],
+    "bootstrap_groups": 589,
+    "bootstrap_reps": 2000,
+    "bootstrap_seed": 20261011,
+    "mcnemar_exact_p": 1.831e-16
+   }
+  },
+  "development_screen_16": {
+   "q36-evidence": {
+    "correct": 8,
+    "unknown": 3,
+    "errors": 0,
+    "median_s": 4.896
+   },
+   "q36-thinking": {
+    "correct": 0,
+    "unknown": 0,
+    "errors": 16,
+    "median_s": 33.924
+   },
+   "q38-evidence": {
+    "correct": 11,
+    "unknown": 4,
+    "errors": 0,
+    "median_s": 20.597
+   },
+   "q38-thinking": {
+    "correct": 7,
+    "unknown": 0,
+    "errors": 9,
+    "median_s": 179.31
+   }
+  },
+  "improvement_package": [
+   "有限URL解码",
+   "业务上下文与攻击证据分开提取",
+   "攻击尝试与攻击成功分离",
+   "6 条已见开发案例的标签语义对照"
+  ],
+  "not_done": [
+   "未获取真实业务接口设计/权限/数据库审计，已核验业务上下文恒为空",
+   "未编造批准",
+   "未整体加白名单",
+   "未微调"
+  ]
+ }
+}

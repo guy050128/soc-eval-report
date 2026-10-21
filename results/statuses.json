@@ -1,0 +1,95 @@
+{
+ "status": {
+  "stage": "complete",
+  "message": "已完成",
+  "published_snapshot_at": "2026-10-10T11:34:52.024731+00:00",
+  "updated_at": "2026-10-10T11:34:52.024717+00:00",
+  "planned_cases": 3478,
+  "completed_cases": 3478,
+  "actual_calls": 3823,
+  "sample_counts": {
+   "development": 200,
+   "validation": 120,
+   "test": 299
+  },
+  "final_scoring_complete": true,
+  "expected_n": 299,
+  "promoted": false
+ },
+ "thinking": {
+  "run_id": "soc-thinking-20261010",
+  "stage": "cancelled",
+  "message": "用户取消思考模式对照测试，保留失败记录",
+  "updated_at": "2026-10-11T13:32:25.113296+00:00",
+  "active_model": "q38",
+  "cap": 32768,
+  "output_mode": "prompt_json",
+  "memory": {
+   "case_count": 1619,
+   "outcome_count": 7478,
+   "correct": 4700,
+   "wrong": 1664,
+   "unknown": 1112,
+   "error": 2,
+   "label_authorities": {
+    "dataset_author": 4
+   }
+  },
+  "error_type": "RuntimeError",
+  "error": "thinking not stable even at 32768; no formal substitution permitted"
+ },
+ "round4": {
+  "stage": "waiting",
+  "message": "思考对照已取消；等待原生MTP/决策模型队列完成",
+  "updated_at": "2026-10-12T02:17:38.069215+00:00",
+  "source_updated_at": "2026-10-12T02:17:29.371373+00:00",
+  "evaluation_kind": "seen_regression",
+  "completed_cases": 0,
+  "planned_cases": 1996,
+  "actual_calls": 0,
+  "source": {
+   "stage": "needs_label_validation",
+   "message": "归档已校验；事件级标签不足，不能以攻击时间窗代替标准答案",
+   "updated_at": "2026-10-10T16:45:24.362334+00:00",
+   "counts": {
+    "total": 2655821,
+    "unqualified_event_label": 839163,
+    "Attack": 1816658
+   },
+   "split_counts": {
+    "development": {
+     "Attack": 6000
+    },
+    "test": {
+     "Attack": 2000
+    }
+   },
+   "new_source_inference_started": false
+  },
+  "model_inference_started": false,
+  "production_promoted": false
+ },
+ "mtp": {
+  "active_model": "qwen3.6:35b-a3b-mtp-q4_K_M",
+  "completed": 12,
+  "detail": "草稿长度 4，思考 False",
+  "message": "比较原生 MTP 草稿长度",
+  "parallel_jobs": {
+   "cuda_build": {
+    "message": "CUDA 运行程序已编译；尚未启动 GPU 模型",
+    "stage": "complete",
+    "updated_at": "2026-10-10T08:06:39.100207+00:00"
+   },
+   "laya": {
+    "active_model": "Laya CPU",
+    "completed": 320,
+    "planned": 320,
+    "stage": "complete",
+    "updated_at": "2026-10-10T09:00:07.730390+00:00"
+   }
+  },
+  "planned": 60,
+  "stage": "mtp_speed",
+  "updated_at": "2026-10-12T02:21:37.510168+00:00"
+ }
+}
